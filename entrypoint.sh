@@ -1,5 +1,8 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+#echo "Hello $1"
+#time=$(date)
+#echo "::set-output name=time::$time"
+
+output=$(cdk $@)
+echo "::set-output name=version::$output"
