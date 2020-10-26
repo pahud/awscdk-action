@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: pahud/awscdk-action@6f009bd
+      uses: pahud/awscdk-action@20ec874
       with:
         command: '--version'
         #who-to-greet: 'Mona the Octocat'
