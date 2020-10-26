@@ -1,6 +1,6 @@
 on:
-  schedule:
-    - cron: 0 6 * * *
+#  schedule:
+#    - cron: 0 6 * * *
   workflow_dispatch: {}
 
 jobs:
@@ -8,13 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-    - name: Hello world action step
-      id: hello
+    - name: version
+      id: version
       uses: pahud/awscdk-action@20ec874
       with:
         command: '--version'
-        #who-to-greet: 'Mona the Octocat'
-    # Use the output from the `hello` step
+    - name: diff
+      id: diff
+      uses: pahud/awscdk-action@20ec874
+      with:
+        command: 'diff'
     - name: Get the output time
-      #run: echo "The time was ${{ steps.hello.outputs.time }}"
-      run: echo "The version was ${{ steps.hello.outputs.version }}"
+      run: echo "The version was ${{ steps.version.outputs.version }}"
