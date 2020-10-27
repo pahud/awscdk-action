@@ -9,11 +9,11 @@ jobs:
     steps:
     - name: version
       id: version
-      uses: pahud/awscdk-action@89555cb
+      uses: pahud/awscdk-action@v0.1.0
       with:
         command: '--version'
-    - name: diff
-      id: diff
-      uses: pahud/awscdk-action@89555cb
-      with:
-        command: 'diff'
+#     - name: diff
+#       id: diff
+#       uses: pahud/awscdk-action@v0.1.0
+#       with:
+#         command: 'diff'
