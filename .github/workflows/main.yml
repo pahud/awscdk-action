@@ -3,19 +3,17 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  hello_world_job:
+  cdk_job:
     runs-on: ubuntu-latest
     name: AWS CDK demo jobs
     steps:
     - name: version
       id: version
-      uses: pahud/awscdk-action@1b07e9c
+      uses: pahud/awscdk-action@89555cb
       with:
         command: '--version'
     - name: diff
       id: diff
-      uses: pahud/awscdk-action@1b07e9c
+      uses: pahud/awscdk-action@89555cb
       with:
         command: 'diff'
-    - name: Get the output time
-      run: echo "The version was ${{ steps.version.outputs.output }}"
