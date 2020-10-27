@@ -1,6 +1,4 @@
 on:
-#  schedule:
-#    - cron: 0 6 * * *
   workflow_dispatch: {}
 
 jobs:
@@ -10,13 +8,13 @@ jobs:
     steps:
     - name: version
       id: version
-      uses: pahud/awscdk-action@20ec874
+      uses: pahud/awscdk-action@1b07e9c
       with:
         command: '--version'
     - name: diff
       id: diff
-      uses: pahud/awscdk-action@20ec874
+      uses: pahud/awscdk-action@1b07e9c
       with:
         command: 'diff'
     - name: Get the output time
-      run: echo "The version was ${{ steps.version.outputs.version }}"
+      run: echo "The version was ${{ steps.version.outputs.output }}"
