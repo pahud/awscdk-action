@@ -6,8 +6,8 @@ inputs:
     description: 'cdk subcommand'
     required: true
 outputs:
-    version:
-        description: 'The version of CDK'
+    ouptut:
+        description: 'The command output'
 runs:
   using: 'docker'
   image: 'Dockerfile'
