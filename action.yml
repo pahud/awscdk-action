@@ -1,14 +1,11 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'CDK action'
+description: 'CDK action'
 inputs:
   command:  # id of input
-    description: 'cdk command'
+    description: 'cdk subcommand'
     required: true
-    #default: 'World'
 outputs:
-#  time: # id of output
-#    description: 'The time we greeted you'
     version:
         description: 'The version of CDK'
 runs:
