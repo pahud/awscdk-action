@@ -3,7 +3,7 @@ name: 'CDK action'
 description: 'CDK action'
 inputs:
   command:  # id of input
-    description: 'cdk subcommand'
+    description: 'the cdk sub-command'
     required: true
 outputs:
     ouptut:
