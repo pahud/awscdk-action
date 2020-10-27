@@ -2,5 +2,5 @@
 
 
 
-cdk $@
+npx cdk $@
 # echo "::set-output name=output::$output"
