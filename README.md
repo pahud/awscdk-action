@@ -27,7 +27,7 @@ jobs:
     - run: yarn install --frozen-lockfile
     - name: version
       id: version
-      uses: pahud/awscdk-action@1351828
+      uses: pahud/awscdk-action@530280e
       with:
         command: '--version'
     - name: Configure AWS Credentials
@@ -40,12 +40,12 @@ jobs:
       run: echo "The CDK CLI version was ${{ steps.version.outputs.version }}"
     - name: diff
       id: diff
-      uses: pahud/awscdk-action@1351828
+      uses: pahud/awscdk-action@530280e
       with:
         command: 'diff'
     - name: deploy
       id: deploy
-      uses: pahud/awscdk-action@1351828
+      uses: pahud/awscdk-action@530280e
       with:
         command: 'deploy --require-approval=never'
 ```
