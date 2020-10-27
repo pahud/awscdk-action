@@ -2,5 +2,5 @@
 
 
 
-output=$(cdk $@)
-echo "::set-output name=output::$output"
+cdk $@
+# echo "::set-output name=output::$output"
