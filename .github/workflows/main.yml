@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: version
       id: version
-      uses: pahud/awscdk-action@v0.1.0
+      uses: pahud/awscdk-action@dd30fe7
       with:
         command: '--version'
 #     - name: diff
