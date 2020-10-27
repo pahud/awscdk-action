@@ -27,7 +27,7 @@ jobs:
     - run: yarn install --frozen-lockfile
     - name: version
       id: version
-      uses: pahud/awscdk-action@v0.1.0
+      uses: pahud/awscdk-action@v0.1.1
       with:
         command: '--version'
     - name: Configure AWS Credentials
@@ -38,12 +38,12 @@ jobs:
         aws-region: us-west-2
     - name: diff
       id: diff
-      uses: pahud/awscdk-action@v0.1.0
+      uses: pahud/awscdk-action@v0.1.1
       with:
         command: 'diff'
     - name: deploy
       id: deploy
-      uses: pahud/awscdk-action@v0.1.0
+      uses: pahud/awscdk-action@v0.1.1
       with:
         command: 'deploy --require-approval=never'
 ```
