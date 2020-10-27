@@ -23,21 +23,29 @@ jobs:
     runs-on: ubuntu-latest
     name: AWS CDK jobs
     steps:
+    - uses: actions/checkout@v2
+    - run: yarn install --frozen-lockfile
     - name: version
       id: version
-      uses: pahud/awscdk-action@20ec874
+      uses: pahud/awscdk-action@1351828
       with:
         command: '--version'
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-west-2
     - name: get the version from the output
-      run: echo "The version was ${{ steps.version.outputs.version }}"
+      run: echo "The CDK CLI version was ${{ steps.version.outputs.version }}"
     - name: diff
       id: diff
-      uses: pahud/awscdk-action@20ec874
+      uses: pahud/awscdk-action@1351828
       with:
         command: 'diff'
     - name: deploy
       id: deploy
-      uses: pahud/awscdk-action@20ec874
+      uses: pahud/awscdk-action@1351828
       with:
         command: 'deploy --require-approval=never'
 ```
