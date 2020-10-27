@@ -1,4 +1,4 @@
-# awscdk-action
+# pahud/awscdk-action
 `pahud/awscdk-action` is a Github Actions workflow that leverages [pahud/github-codespace](https://github.com/pahud/github-codespace) docker image to help you execute AWS CDK CLI in the workflows.
 
 # Why `pahud/github-codespace` Docker image
