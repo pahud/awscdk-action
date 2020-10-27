@@ -1,3 +1,4 @@
+name: CDK
 on:
   workflow_dispatch: {}
 
